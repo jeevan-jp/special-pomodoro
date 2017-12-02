@@ -11,23 +11,29 @@
                 <h1>Pomodoro Clock</h1>
             </div>
 
-            <div class="row flex" style="margin-top: 20px">
-                <ul class="flex">
+            <div>
+                <ul class="row flex" style="margin-top: 20px">
                     <li class="flex">
-                        <button class="third">-</button>
-                        <button class="third">10</button>
-                        <button class="third">+</button>
+                        <button class="third" id="minusBreak">-</button>
+                        <input style="text-align: center;" value="5" id="break" class="third" type="text" disabled />
+                        <button class="third" id="plusBreak">+</button>
                     </li>
                     <li class="flex">
-                        <button class="third">-</button>
-                        <button class="third">10</button>
-                        <button class="third">+</button>
+                        <button class="third" id="minusSession">-</button>
+                        <input style="text-align: center;" value="25" id="session" class="third" type="text" disabled />
+                        <button class="third" id="plusSession">+</button>
                     </li>
                 </ul>
             </div>
 
             <div class="row flex">
-                <div class="box">Hello</div>
+                <div class="box">
+                    <br><br>
+                    <div id="sessionText">Session Timer</div>
+                    <input class="timerText" type="text" name="hm" value="25" disabled />
+                    <input id="box2" type="text" name="hm" value=":" disabled />
+                    <input class="timerText" type="text" name="hm" value="00" disabled />
+                </div>
             </div>
         </div>
         <script src="scripts/jquery-3.2.1.min.js"></script>

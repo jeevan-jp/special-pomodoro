@@ -48,9 +48,32 @@ li {
     border-radius: 50%;
     background: black;
     margin-top: 30px;
-    color: wheat;
-    font-size: 100px;
+    color: white;
     text-align: center;
+}
+
+#sessionText {
+    font-size: 30px;
+}
+
+.timerText {
+    width: 60px;
+    text-align: center;
+    margin-top: 40px;
+    background: black;
+    border: none;
+    color: red;
+    font-size: 50px;
+}
+
+#box2 {
+    width: 20px;
+    text-align: center;
+    margin-top: 40px;
+    background: black;
+    border: none;
+    color: red;
+    font-size: 50px;
 }
 
 h1 {
