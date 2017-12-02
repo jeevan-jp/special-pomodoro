@@ -6,14 +6,20 @@ html, body {
 }
 
 .container {
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 ul {
     list-style: none;
 }
 
-li {
+.design1 {
+    width: 200px;
+    text-align: center;
+    margin-top: 5%;
+    color: blue;
+}
+.design2 {
     height: 70px;
     width: 200px;
     font-size: 25px;

@@ -7,14 +7,16 @@ $(document).ready(function() {
 	$('.box').on("click", function() {
 		flag3 = 1;
 		if(flag1 == 0) {
-			if($('#sessionText').html() == '') {
+			if($('#sessionText').html() == '' || $('#sessionText').html('Session Paused')) {
 				$('#sessionText').html('Session Running');
 			}
 			flag1 = 1;
 			timer();
 		}
-		else 
+		else {
+			$('#sessionText').html('Session Paused');
 			flag2 = 1;
+		}
 	})
 
 	$('#plusBreak').on("click", function() {
