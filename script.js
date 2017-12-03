@@ -1,8 +1,12 @@
 $(document).ready(function() {
 
-	var flag1 = 0;		// flag1 becomes 1 when user starts the timer
-	var flag2 = 0;		// flag2 becomes 1 when user stops the timer
-	var flag3 = 0; 		// flag3 becomes 1 either flag1 or flag2 to changes.
+	var audioTick = new Audio('http://soundbible.com/mp3/Tick-DeepFrozenApps-397275646.mp3');
+	var timeOut = new Audio('http://soundbible.com/mp3/Air Horn-SoundBible.com-964603082.mp3');
+	var flag1 = 0;		// flag1 will be 1 when user starts the timer.
+	var flag2 = 0;		// flag2 will be 1 when user stops the timer.
+	var flag3 = 0; 		// flag3 will be 1 either flag1 or flag2 to changes.
+	var flag4 = 0; 		// flag4 will be 1 if break time starts.
+
 
 	$('.box').on("click", function() {
 		flag3 = 1;
@@ -102,10 +106,21 @@ $(document).ready(function() {
 			addZero();
 		}
 		else if(x==0 && y==0) {
-			$('#sessionText').html('Break Time');
-			$('#minutes').val(parseInt($('#break').val()));
-			$('#seconds').val(0);
+			timeOut.play();
+			if(flag4 == 0) {			//Break time ends, and session time will start again.
+				flag4 = 1;
+				$('#sessionText').html('Break Time');
+				$('#minutes').val(parseInt($('#break').val()));
+				$('#seconds').val(0);
+			}
+			else if(flag4 == 1) {		//Session time ends, and break will start.
+				flag4 = 0;
+				$('#sessionText').html('Session running');
+				$('#minutes').val(parseInt($('#session').val()));
+				$('#seconds').val(0);
+			}
 		}
+		audioTick.play();
 		setTimeout(timer, 1000);
 	}
 
