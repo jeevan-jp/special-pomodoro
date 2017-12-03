@@ -7,6 +7,8 @@ $(document).ready(function() {
 	var flag3 = 0; 		// flag3 will be 1 either flag1 or flag2 to changes.
 	var flag4 = 0; 		// flag4 will be 1 if break time starts.
 
+	startDictation();
+
 
 	$('.box').on("click", function() {
 		flag3 = 1;
@@ -132,4 +134,47 @@ $(document).ready(function() {
 			$('#seconds').val('0' + $('#seconds').val()[$('#seconds').val().length - 1]);
 		}
 	}
+
+	function startDictation() {
+
+		window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+		  var recognition = new SpeechRecognition();
+		
+		  recognition.interimResults = true;
+		  
+		  recognition.onend = function(e) {
+			  startDictation();
+		  }
+
+      	recognition.addEventListener('result', e => {
+			  //console.log(e.results);
+			  const transcript = Array.from(e.results)
+				  .map(result => result[0])
+				  .map(result => result.transcript)
+				  .join('').toString();
+				  var lowercase = transcript.toLowerCase();
+				
+			  console.log(lowercase);
+			  if(lowercase === "ok google") {
+				timeOut.play();
+			  }
+
+			  if((lowercase === "start" || lowercase === "star" || lowercase === "at") && flag1 == 0) {
+				$('.box').click();
+				flag1 = 1;
+			  }
+
+			  if((lowercase === "stop"|| lowercase === "top" || lowercase === "up" || lowercase === "pause") && flag2 == 0) {
+				$('#sessionText').html('Session Paused');
+				$('.box').click();
+				flag2 = 1;
+			  }
+
+			  if(lowercase === "refresh" || lowercase === "fresh") {
+				  location.reload();
+			  }
+      	});
+
+		recognition.start();
+    }
 })
