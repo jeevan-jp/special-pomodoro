@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 		var audioTick = new Audio('https://raw.githubusercontent.com/jeevan-jp/special-pomodoro/master/audio/Tick-DeepFrozenApps-397275646.mp3');
 		var timeOut = new Audio('https://raw.githubusercontent.com/jeevan-jp/special-pomodoro/master/audio/Air%20Horn-SoundBible.com-964603082.mp3');
-		var songs = ['https://docs.google.com/uc?export=download&id=1eNWNtDIeCHnst8nIu0ZX8Vn0uio0o1KY', 'https://docs.google.com/uc?export=download&id=1kK3qdSDM5LqMOvZphgVASRd03EIXcGc-', 'https://docs.google.com/uc?export=download&id=1FeW32jQLzVbGnj1yfsSLyxQ7kfKZR4UJ', 'https://docs.google.com/uc?export=download&id=1aa-nrfKra2kx15dBNavH4AuVSIsyEKxD'];
+		var songs = ['https://docs.google.com/uc?export=download&id=1eNWNtDIeCHnst8nIu0ZX8Vn0uio0o1KY', 'https://docs.google.com/uc?export=download&id=1kK3qdSDM5LqMOvZphgVASRd03EIXcGc-', 'https://docs.google.com/uc?export=download&id=1XED7_-ouP5w56o8mtFKgMpkg48pGF5mr', 'https://docs.google.com/uc?export=download&id=1aa-nrfKra2kx15dBNavH4AuVSIsyEKxD'];
 		//var shape1 = new Audio('https://docs.google.com/uc?export=download&id=1eNWNtDIeCHnst8nIu0ZX8Vn0uio0o1KY', 'https://docs.google.com/uc?export=download&id=1kK3qdSDM5LqMOvZphgVASRd03EIXcGc-', 'https://docs.google.com/uc?export=download&id=1FeW32jQLzVbGnj1yfsSLyxQ7kfKZR4UJ', 'https://docs.google.com/uc?export=download&id=1aa-nrfKra2kx15dBNavH4AuVSIsyEKxD');
 		var flag1 = 0;		// flag1 will be 1 when user starts the timer.
 		var flag2 = 0;		// flag2 will be 1 when user stops the timer.
