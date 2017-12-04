@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-	var audioTick = new Audio('http://soundbible.com/mp3/Tick-DeepFrozenApps-397275646.mp3');
-	var timeOut = new Audio('http://soundbible.com/mp3/Air Horn-SoundBible.com-964603082.mp3');
+	var audioTick = new Audio('https://raw.githubusercontent.com/jeevan-jp/special-pomodoro/master/audio/Tick-DeepFrozenApps-397275646.mp3');
+	var timeOut = new Audio('https://raw.githubusercontent.com/jeevan-jp/special-pomodoro/master/audio/Air%20Horn-SoundBible.com-964603082.mp3');
 	var flag1 = 0;		// flag1 will be 1 when user starts the timer.
 	var flag2 = 0;		// flag2 will be 1 when user stops the timer.
 	var flag3 = 0; 		// flag3 will be 1 either flag1 or flag2 to changes.
@@ -155,7 +155,7 @@ $(document).ready(function() {
 				  var lowercase = transcript.toLowerCase();
 				
 			  console.log(lowercase);
-			  if(lowercase === "ok google") {
+			  if(lowercase === "ok google" || lowercase === "noise" || lowercase === "make some noise") {
 				timeOut.play();
 			  }
 
