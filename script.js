@@ -172,7 +172,7 @@ $(document).ready(function() {
 					$('.box').click();
 					flag2 = 1;
 					if(song!=="")
-					{ song.pause(); }
+					{ song.pause(); song="";}
 				  }
 	
 				  if(lowercase === "refresh" || lowercase === "fresh") {
