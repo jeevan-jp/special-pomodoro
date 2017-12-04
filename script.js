@@ -8,6 +8,7 @@ $(document).ready(function() {
 		var flag2 = 0;		// flag2 will be 1 when user stops the timer.
 		var flag3 = 0; 		// flag3 will be 1 either flag1 or flag2 to changes.
 		var flag4 = 0; 		// flag4 will be 1 if break time starts.
+		const song = "";
 	
 		startDictation();
 	
@@ -170,6 +171,7 @@ $(document).ready(function() {
 					$('#sessionText').html('Session Paused');
 					$('.box').click();
 					flag2 = 1;
+					song.stop();
 				  }
 	
 				  if(lowercase === "refresh" || lowercase === "fresh") {
@@ -183,7 +185,7 @@ $(document).ready(function() {
 				  if(lowercase === "play") {
 					  var a = songs[Math.floor(Math.random()*songs.length)];
 					  console.log(a);
-					  var song = new Audio(a);
+					  song = new Audio(a);
 					  song.play();
 				  }
 			  });
