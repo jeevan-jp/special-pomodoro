@@ -171,7 +171,7 @@ $(document).ready(function() {
 					$('#sessionText').html('Session Paused');
 					$('.box').click();
 					flag2 = 1;
-					song.stop();
+					song.pause();
 				  }
 	
 				  if(lowercase === "refresh" || lowercase === "fresh") {
@@ -183,6 +183,7 @@ $(document).ready(function() {
 				  }
 	
 				  if(lowercase === "play") {
+					  song.pause();
 					  var a = songs[Math.floor(Math.random()*songs.length)];
 					  console.log(a);
 					  song = new Audio(a);
